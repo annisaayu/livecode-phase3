@@ -42,9 +42,9 @@ class PlayScreen extends Component {
     this.props.touchBoard(boardData, 0)
   }
 
-  touchBoard(row, column) {
+  touchBoard(x, y) {
     let boardData = this.props.redux.board
-    let player = this.props.redux.activePlayer
+    let activePlayer = this.props.redux.activePlayer
 
     if (boardData[x][y] == 0) {
       if (activePlayer == 0) {
@@ -69,7 +69,10 @@ class PlayScreen extends Component {
           <View style={styles.rowBoard}>
             <TouchableOpacity style={styles.xo} onPress={() => {this.touchBoard(0,0)}}>
             <View style={{width: 50, height: 50, backgroundColor: 'skyblue',}}>
-                <Text>{board[0][0]}</Text>
+                <Text>
+                {board[0][0]}
+                  {board[0][0]}
+                </Text>
               </View>
             </TouchableOpacity>
             <TouchableOpacity style={styles.xo} onPress={() => {this.touchBoard(0,1)}}>
