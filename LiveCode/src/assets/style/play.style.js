@@ -10,6 +10,9 @@ const styles = StyleSheet.create({
   },
   rowBoard: {
     flexDirection: 'row'
+  },
+  xo: {
+    padding: 5
   }
 });
 

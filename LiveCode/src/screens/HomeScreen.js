@@ -7,10 +7,9 @@ import styles from '../assets/style/main.style'
 
 
 export default class App extends Component {
-
+  
   onPressStart () {
-
-    this.navigation.navigate('Play')
+    this.props.navigation.navigate('Play')
   }
 
   render() {
@@ -20,7 +19,7 @@ export default class App extends Component {
         <Button
         style={{fontSize: 20, color: 'green'}}
         styleDisabled={{color: 'red'}}
-        onPress={() => {this.props.navigation.navigate('Play')}}>
+        onPress={() => { this.onPressStart()}}>
         START!
       </Button>
       </View>
